@@ -1,0 +1,22 @@
+window.config = {
+  routerBasename: null,
+  showStudyList: true,
+  dataSources: [
+    {
+      namespace: '@ohif/extension-default.dataSourcesModule.dicomweb',
+      sourceName: 'dicomweb',
+      configuration: {
+        friendlyName: 'DCM4CHEE PACS',
+        name: 'DCM4CHEE',
+        // Replace 'ip' with your actual server IP address
+        wadoUriRoot: 'http://ip:8080/dcm4chee-arc/aets/DCM4CHEE/wado',
+        qidoRoot: 'http://ip:8080/dcm4chee-arc/aets/DCM4CHEE/rs',
+        wadoRoot: 'http://ip:8080/dcm4chee-arc/aets/DCM4CHEE/rs',
+        qidoSupportsIncludeField: true,
+        imageRendering: 'wadors',
+        thumbnailRendering: 'wadors',
+      },
+    },
+  ],
+  defaultDataSourceName: 'dicomweb',
+};
